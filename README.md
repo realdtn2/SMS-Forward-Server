@@ -1,6 +1,6 @@
-Install requirements.txt
+pip install -U -r requirements.txt requirements.txt
 
-Install gunicorn
+sudo apt install gunicorn
 
 Run ./setup.sh then ./reset.sh
 

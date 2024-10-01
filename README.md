@@ -1,4 +1,4 @@
-pip install -U -r requirements.txt requirements.txt
+pip install -U -r requirements.txt
 
 sudo apt install gunicorn
 

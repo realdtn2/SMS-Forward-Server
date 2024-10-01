@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+Messages from {{ from_number }}
+{% endblock %}
+
+{% block content %}
+        <h1 class="mt-4">Senders</h1>
+
+        <!-- Display unique "from" numbers -->
+        <ul class="list-group mb-4">
+            {% for sender in from_numbers %}
+                <li class="list-group-item">
+                    <a href="{{ url_for('messages_by_from', sms_type=from_number, from_number=sender) }}">{{ sender }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+{% endblock %}

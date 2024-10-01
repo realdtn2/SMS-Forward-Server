@@ -8,7 +8,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 DISPLAY_NAME_FILE = 'display_names.json'
 
-
 def load_display_names():
     if os.path.exists(DISPLAY_NAME_FILE):
         with open(DISPLAY_NAME_FILE, 'r') as f:
@@ -164,9 +163,9 @@ def delete_messages_from_number(sms_type):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-        if not User.query.filter_by(username='realdtn').first():
-            hashed_password = generate_password_hash('rdtn@17022008')
-            new_user = User(username='realdtn', password=hashed_password)
+        if not User.query.filter_by(username='username').first():
+            hashed_password = generate_password_hash('password')
+            new_user = User(username='username', password=hashed_password)
             db.session.add(new_user)
             db.session.commit()
 
